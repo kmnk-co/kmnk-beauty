@@ -5,7 +5,7 @@ const Page = () => {
     <div className={Styles.wrapper}>
       <div className={Styles.message}>
         <div>kmnk.beauty</div>
-        <div>We'll be right back!</div>
+        <div>We&apos;ll be right back!</div>
       </div>
     </div>
   );
