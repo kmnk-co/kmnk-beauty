@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Meow+Script&family=Quicksand:wght@300..700&display=swap');
+
+.wrapper {
+    @apply flex justify-center items-center;
+    @apply h-full;
+}
+
+.message > div:first-child {
+    @apply my-5;
+    @apply text-9xl text-center;
+    font-family: "Meow Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.message > div:last-child {
+    @apply text-3xl text-center;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}

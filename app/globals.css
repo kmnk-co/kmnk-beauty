@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+:root, body {
+  @apply h-full;
+}
+
+.footer {
+  @apply fixed bottom-0;
+  @apply w-full flex justify-center;
+}
+
+.footer > div {
+  @apply my-5;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Adds support for light/dark color scheme based on user's OS choice */
 :root {
   --background: #ffffff;
   --foreground: #171717;
