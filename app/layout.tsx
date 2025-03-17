@@ -14,9 +14,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
-        <div className="footer">
-          <div>Created with love by KMNK™ Co.</div>
+        <div className="pt-10 pb-5">{children}</div>
+        <div className="py-5 text-center hind-light">
+          <div>
+            © 2025{" "}
+            <a href="https://kmnk.beauty/" className="hover:underline">
+              KMNK™ Beauty.
+            </a>{" "}
+            All rights reserved.
+          </div>
+          <div>
+            Created with love by{" "}
+            <a href="https://kmnk.co/" className="hover:underline">
+              KMNK™ Co.
+            </a>
+          </div>
         </div>
       </body>
     </html>
