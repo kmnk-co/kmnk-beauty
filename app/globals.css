@@ -1,22 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Lora:ital,wght@0,400..700;1,400..700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root, body {
+:root,
+body {
   @apply h-full;
-}
-
-.footer {
-  @apply fixed bottom-0;
-  @apply w-full flex justify-center;
-}
-
-.footer > div {
-  @apply my-5;
-  font-family: "Quicksand", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
 }
 
 /* Adds support for light/dark color scheme based on user's OS choice */
@@ -36,4 +26,47 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* */
+
+.footer {
+  @apply fixed bottom-0;
+  @apply w-full flex justify-center;
+  background: var(--background);
+}
+
+.footer > div {
+  @apply my-2;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@layer components {
+  .cmp-container {
+    @apply container 2xl:px-60 xl:px-40 lg:px-20 md:px-10 px-5 mx-auto;
+  }
+}
+
+@layer utilities {
+  .prompt {
+    font-family: "Prompt", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .lora-normal-oblique {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: oblique;
+  }
+
+  .hind-light {
+    font-family: "Hind", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
 }
