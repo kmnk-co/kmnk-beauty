@@ -1,15 +1,28 @@
+import { ReadFile } from "@/app/helpers/file-parser";
+import { Components } from "@/app/helpers/markdown";
+import { readdir } from "node:fs/promises";
 import Markdown from "react-markdown";
-import { ReadFile } from "../helpers/file-parser";
-import { Components } from "../helpers/markdown";
 
-const Page = async () => {
+export async function generateStaticParams() {
+  let posts: string[] = [];
+  try {
+    posts = await readdir(process.cwd() + "/app/blog/posts/");
+  } catch (err) {
+    console.error(err);
+  }
+
+  return posts.map((value) => ({ slug: value }));
+}
+
+const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
+  const slug = (await params).slug;
   const metadata = await ReadFile(
-    process.cwd() + "/app/modalities/metadata.json"
+    process.cwd() + "/app/blog/posts/" + slug + "/metadata.json"
   ).then((x) => {
     return JSON.parse(x ?? "");
   });
   const content = await ReadFile(
-    process.cwd() + "/app/modalities/content.mdown"
+    process.cwd() + "/app/blog/posts/" + slug + "/content.mdown"
   );
 
   return (

@@ -71,7 +71,6 @@ const aComponent = (
     AnchorHTMLAttributes<HTMLAnchorElement> &
     ExtraProps
 ): JSX.Element => {
-  console.log(props);
   return (
     <a href={props.href} className="text-blue-500 underline">
       {props.children}
