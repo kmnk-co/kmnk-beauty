@@ -5,7 +5,7 @@ export const ReadFile = async (path: string) => {
   try {
     fileContents = await readFile(path, "utf8");
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 
   return fileContents;

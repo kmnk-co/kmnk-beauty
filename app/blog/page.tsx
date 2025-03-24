@@ -1,21 +1,40 @@
+import Card from "./components/card";
 import Link from "next/link";
-import { readdir } from "node:fs/promises";
+import { GetFeaturedPosts, GetPosts } from "./helpers/post";
 
 const Page = async () => {
-  let posts: string[] = [];
-  try {
-    posts = await readdir(process.cwd() + "/app/blog/posts/");
-  } catch (err) {
-    console.error(err);
-  }
+  const Posts = await GetPosts();
+  const FeaturedPosts = await GetFeaturedPosts(Posts);
 
   return (
     <div className="cmp-container">
-      {posts.map((value, index) => (
-        <Link key={index} href={"blog/" + value} className="hover:underline">
-          {value + "/"}
-        </Link>
-      ))}
+      <div className="my-5 text-3xl lora-normal-oblique">Featured Posts</div>
+      <div className="grid grid-cols-2 gap-4">
+        {FeaturedPosts.length > 0 ? (
+          FeaturedPosts.map((post) => <Card key={post.slug} post={post} />)
+        ) : (
+          <div className="my-2 pl-2 border-l-2 hind-light">
+            There is nothing to display.
+          </div>
+        )}
+      </div>
+      <div className="my-5 text-3xl lora-normal-oblique">Previous Posts</div>
+      {Posts.length > 0 ? (
+        Posts.map((value, index) => (
+          <div key={index} className="my-2 pl-2 border-l-2">
+            <Link
+              href={"/blog/" + value.slug}
+              className="hind-light hover:underline"
+            >
+              {value.metadata.title}
+            </Link>
+          </div>
+        ))
+      ) : (
+        <div className="my-2 pl-2 border-l-2 hind-light">
+          There is nothing to display.
+        </div>
+      )}
     </div>
   );
 };
