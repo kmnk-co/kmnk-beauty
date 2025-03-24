@@ -1,7 +1,8 @@
-import { ReadFile } from "@/app/helpers/file-parser";
-import { Components } from "@/app/helpers/markdown";
+import { Components } from "@/app/blog/helpers/markdown";
 import { readdir } from "node:fs/promises";
 import Markdown from "react-markdown";
+import { GetFullPost } from "../helpers/post";
+import { FormatAuthorStr } from "../helpers/format";
 
 export async function generateStaticParams() {
   let posts: string[] = [];
@@ -15,34 +16,22 @@ export async function generateStaticParams() {
 }
 
 const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
-  const slug = (await params).slug;
-  const metadata = await ReadFile(
-    process.cwd() + "/app/blog/posts/" + slug + "/metadata.json"
-  ).then((x) => {
-    return JSON.parse(x ?? "");
-  });
-  const content = await ReadFile(
-    process.cwd() + "/app/blog/posts/" + slug + "/content.mdown"
-  );
+  const Post = await GetFullPost((await params).slug);
 
   return (
     <div className="cmp-container">
       <div className="mb-5 pl-4 border-l-4">
-        <div className="text-4xl prompt">{metadata.title}</div>
+        <div className="text-4xl prompt">{Post.metadata.title}</div>
         <div className="hind-light">
-          {metadata.updatedOn ? (
-            <div>
-              Updated on {metadata.updatedOn} by {metadata.author}.
-            </div>
-          ) : (
-            <div>
-              Written on {metadata.writtenOn} by {metadata.author}.
-            </div>
+          {FormatAuthorStr(
+            Post.metadata.authors,
+            Post.metadata.writtenOn,
+            Post.metadata.updatedOn
           )}
         </div>
       </div>
       <div className="mt-5">
-        <Markdown components={Components}>{content}</Markdown>
+        <Markdown components={Components}>{Post.content}</Markdown>
       </div>
     </div>
   );
