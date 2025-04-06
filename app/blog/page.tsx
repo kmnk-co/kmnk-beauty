@@ -9,7 +9,7 @@ const Page = async () => {
   return (
     <div className="cmp-container">
       <div className="my-5 text-3xl lora-normal-oblique">Featured Posts</div>
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid md:grid-cols-2 gap-4">
         {FeaturedPosts.length > 0 ? (
           FeaturedPosts.map((post) => <Card key={post.slug} post={post} />)
         ) : (
