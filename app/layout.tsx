@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Link from "next/link";
+import Header from "./layout/header";
 
 export const metadata: Metadata = {
   title: "KMNK Beauty",
@@ -15,10 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="flex justify-center py-3 text-xl hind-light border-b-2">
-          <Link className="mx-2 hover:underline" href={"/"}>Home</Link>
-          <Link className="mx-2 hover:underline" href={"/blog"}>Blog</Link>
-        </div>
+        <Header />
         <div className="flex flex-col min-h-full">
           <div className="flex-grow pt-10 pb-5">{children}</div>
           <div className="flex-grow-0 flex-shrink-0 py-5 text-center hind-light">
