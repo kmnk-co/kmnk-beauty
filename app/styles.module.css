@@ -7,11 +7,7 @@
 }
 
 .message > div:first-child {
-    @apply my-5;
-    @apply text-9xl text-center;
-    font-family: "Meow Script", cursive;
-    font-weight: 400;
-    font-style: normal;
+    @apply text-[4.5rem] text-center daniel-normal brand-gradient;
 }
 
 .message > div:last-child {
