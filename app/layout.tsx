@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./layout/header";
 import Footer from "./layout/footer";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "KMNK Beauty",
@@ -15,6 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Analytics />
       <body>
         {/* <div className="flex text-cream">
           <div className="p-1 bg-sunflower border border-background sm:hidden">XS</div>
