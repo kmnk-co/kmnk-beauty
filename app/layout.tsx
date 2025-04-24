@@ -16,8 +16,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Analytics />
       <body>
+        <Analytics />
         {/* <div className="flex text-cream">
           <div className="p-1 bg-sunflower border border-background sm:hidden">XS</div>
           <div className="p-1 bg-tangerine border border-background hidden sm:max-md:block">S</div>
