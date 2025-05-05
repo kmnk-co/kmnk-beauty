@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Link from "next/link";
+import Header from "./layout/header";
+import Footer from "./layout/footer";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "KMNK Beauty",
@@ -15,26 +17,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="flex justify-center py-3 text-xl hind-light border-b-2">
-          <Link className="mx-2 hover:underline" href={"/"}>Home</Link>
-          <Link className="mx-2 hover:underline" href={"/blog"}>Blog</Link>
-        </div>
-        <div className="flex flex-col min-h-full">
-          <div className="flex-grow pt-10 pb-5">{children}</div>
-          <div className="flex-grow-0 flex-shrink-0 py-5 text-center hind-light">
-            <div>
-              © 2025{" "}
-              <a href="https://kmnk.beauty/" className="hover:underline">
-                KMNK™ Beauty.
-              </a>{" "}
-              All rights reserved.
-            </div>
-            <div>
-              Created with love by{" "}
-              <a href="https://kmnk.co/" className="hover:underline">
-                KMNK™ Co.
-              </a>
-            </div>
+        <Analytics />
+        {/* <div className="flex text-cream">
+          <div className="p-1 bg-sunflower border border-background sm:hidden">XS</div>
+          <div className="p-1 bg-tangerine border border-background hidden sm:max-md:block">S</div>
+          <div className="p-1 bg-salmon border border-background hidden md:max-lg:block">M</div>
+          <div className="p-1 bg-coral border border-background hidden lg:max-xl:block">L</div>
+          <div className="p-1 bg-foreground border border-background hidden xl:block">XL</div>
+        </div> */}
+        <Header />
+        <div className="flex flex-col min-h-full pt-[2.825rem] -mt-[2.825rem] sm:pt-[1.325rem] sm:-mt-[1.325rem]">
+          <div className="flex-grow">{children}</div>
+          <div className="flex-grow-0 flex-shrink-0">
+            <Footer />
           </div>
         </div>
       </body>

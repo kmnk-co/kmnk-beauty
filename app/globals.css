@@ -1,47 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Lora:ital,wght@0,400..700;1,400..700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.cdnfonts.com/css/daniel');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root,
-body {
-  @apply h-full;
+/* This is needed for the flex layout so the site footer is pushed down to bottom of page */
+:root, body {
+    @apply h-full;
 }
 
 /* Adds support for light/dark color scheme based on user's OS choice */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: theme(colors.cream);
+  --foreground: theme(colors.coffee);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: theme(colors.coffee);
+    --foreground: theme(colors.cream);
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* */
-
-.footer {
-  @apply fixed bottom-0;
-  @apply w-full flex justify-center;
-  background: var(--background);
-}
-
-.footer > div {
-  @apply my-2;
-  font-family: "Quicksand", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
 }
 
 @layer components {
@@ -68,5 +52,24 @@ body {
     font-family: "Hind", serif;
     font-weight: 300;
     font-style: normal;
+  }
+
+  .daniel-light {
+    font-family: 'Daniel', sans-serif;
+    font-weight: 400;
+  }
+
+  .daniel-normal {
+    font-family: 'Daniel', sans-serif;
+    font-weight: 700;
+  }
+
+  .daniel-heavy {
+    font-family: 'Daniel Black', sans-serif;
+  }
+
+  .brand-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(to right, theme(colors.sunflower), theme(colors.tangerine), theme(colors.salmon), theme(colors.coral));
   }
 }

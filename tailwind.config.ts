@@ -11,6 +11,12 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        cream: "#fafae1",
+        sunflower: "#ffd31f",
+        tangerine: "#ffbe4e",
+        salmon: "#ffa97e",
+        coral: "#ff94ae",
+        coffee: "#4f3130",
       },
     },
   },

@@ -20,12 +20,12 @@ const Card = (props: { post: Post }) => {
 
   return (
     <div
-      className="relative px-3 max-h-72 overflow-hidden border hover:cursor-pointer"
+      className="relative px-3 max-h-72 overflow-hidden border border-foreground hover:cursor-pointer"
       onClick={OnClick}
       onMouseEnter={OnMouseOver}
       onMouseLeave={OnMouseOver}
     >
-      <div className="my-3 pl-2 border-l-4">
+      <div className="my-3 pl-2 border-l-4 border-foreground">
         <div className="text-xl prompt">{props.post.metadata.title}</div>
         <div className="text-sm hind-light">
           {FormatAuthorStr(
