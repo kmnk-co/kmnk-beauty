@@ -24,8 +24,8 @@ const Page = () => {
           width: "100%",
           height: "auto",
         }}
-        width={4096}
-        height={2732}
+        width={16}
+        height={10}
       />
     </div>
   );
