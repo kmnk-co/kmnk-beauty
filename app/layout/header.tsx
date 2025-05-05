@@ -9,7 +9,7 @@ const Links = [
 
 const Header = () => {
   return (
-    <div className="py-4 sticky top-0 bg-cream">
+    <div className="py-4 sticky top-0 bg-background">
       <Link
         className="text-[1.875rem] text-center daniel-normal brand-gradient hover:underline sm:hidden"
         href={"/"}

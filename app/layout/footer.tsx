@@ -12,7 +12,7 @@ const Footer = () => {
             <div>Permanent Hair Removal & Waxing Services</div>
             <div>Located in Milwaukee, WI</div>
           </div>
-            <Link href="mailto:kamella@kmnk.beauty" className="block hover:underline">kamella@kmnk.beauty</Link>
+            <Link href="mailto:info@kmnk.beauty" className="block hover:underline">info@kmnk.beauty</Link>
             <Link href="tel:+12629228821" className="block hover:underline">+1 (262) 922-8821</Link>
         </div>
       </div>

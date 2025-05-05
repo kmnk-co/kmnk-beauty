@@ -19,8 +19,8 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const Post = await GetFullPost((await params).slug);
 
   return (
-    <div className="cmp-container">
-      <div className="mb-5 pl-4 border-l-4">
+    <div className="cmp-container my-5">
+      <div className="mb-5 pl-4 border-l-4 border-foreground">
         <div className="text-4xl prompt">{Post.metadata.title}</div>
         <div className="hind-light">
           {FormatAuthorStr(
