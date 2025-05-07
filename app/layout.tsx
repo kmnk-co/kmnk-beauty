@@ -6,7 +6,20 @@ import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "KMNK Beauty",
-  description: "Created with love by KMNK™ Co.",
+  description: "Trans-friendly salon in Milwaukee, WI specializing in permanent hair removal.",
+  openGraph: {
+    url: "https://kmnk.beauty",
+    type: "website",
+    title: "KMNK Beauty",
+    description: "Trans-friendly salon in Milwaukee, WI specializing in permanent hair removal.",
+    images: ["/og-image.png"]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "KMNK Beauty",
+    description: "Trans-friendly salon in Milwaukee, WI specializing in permanent hair removal.",
+    images: ["/og-image.png"],
+  }
 };
 
 export default function RootLayout({
