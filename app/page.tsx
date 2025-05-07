@@ -16,8 +16,8 @@ const Page = () => {
     // </div>
     <div className="">
       <Image
-      className=""
-        src={"/stock-photo.png"}
+      className="dark:hidden"
+        src={"/jumbotron.png"}
         alt="Picture of the author"
         sizes="100vw"
         style={{
