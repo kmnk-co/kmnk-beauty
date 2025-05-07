@@ -12,13 +12,13 @@ export const metadata: Metadata = {
     type: "website",
     title: "KMNK Beauty",
     description: "Trans-friendly salon in Milwaukee, WI specializing in permanent hair removal.",
-    images: ["/og-image.png"]
+    images: ["/open-graph.png"]
   },
   twitter: {
     card: "summary_large_image",
     title: "KMNK Beauty",
     description: "Trans-friendly salon in Milwaukee, WI specializing in permanent hair removal.",
-    images: ["/og-image.png"],
+    images: ["/open-graph.png"],
   }
 };
 
