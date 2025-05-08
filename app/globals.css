@@ -32,6 +32,36 @@ body {
   .cmp-container {
     @apply container 2xl:px-60 xl:px-40 lg:px-20 md:px-10 px-5 mx-auto;
   }
+
+  .cmp-markdown {
+    & p {
+        @apply hind-light;
+    }
+    & h1 {
+        @apply my-4 text-4xl text-center prompt;
+    }
+    & h2 {
+        @apply my-2 text-2xl lora-normal-oblique;
+    }
+    & h3 {
+        @apply my-2 text-xl hind-light;
+    }
+    & a {
+        @apply text-blue-500 underline;
+    }
+    & blockquote {
+        @apply ml-3 pl-3 my-3 py-1 border-l-2 border-foreground;
+    }
+    & strong {
+        @apply font-bold;
+    }
+    & ol {
+        @apply my-1 pl-5 hind-light list-decimal;
+    }
+    & ul {
+        @apply my-1 pl-5 hind-light list-disc;
+    }
+  }
 }
 
 @layer utilities {
