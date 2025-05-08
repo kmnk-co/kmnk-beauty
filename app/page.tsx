@@ -6,7 +6,7 @@ const Page = () => {
       <div className="mx-auto max-w-screen-xl">
         <Image
           src={"/jumbotron.png"}
-          alt="Picture of the author"
+          alt="jumbotron.png"
           sizes="100vw"
           style={{
             width: "100%",

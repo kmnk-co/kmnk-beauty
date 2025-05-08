@@ -1,4 +1,3 @@
-import { Components } from "@/app/blog/helpers/markdown";
 import { readdir } from "node:fs/promises";
 import Markdown from "react-markdown";
 import { GetFullPost } from "../helpers/post";
@@ -31,7 +30,9 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
         </div>
       </div>
       <div className="mt-5">
-        <Markdown components={Components}>{Post.content}</Markdown>
+        <div className="cmp-markdown">
+          <Markdown>{Post.content}</Markdown>
+        </div>
       </div>
     </div>
   );
