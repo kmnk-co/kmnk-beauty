@@ -2,6 +2,8 @@ import { readdir } from "node:fs/promises";
 import Markdown from "react-markdown";
 import { GetFullPost } from "../helpers/post";
 import { FormatAuthorStr } from "../helpers/format";
+import remarkGfm from "remark-gfm";
+import remarkEmoji from "remark-emoji";
 
 export async function generateStaticParams() {
   let posts: string[] = [];
@@ -31,7 +33,9 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
       </div>
       <div className="mt-5">
         <div className="cmp-markdown">
-          <Markdown>{Post.content}</Markdown>
+          <Markdown remarkPlugins={[remarkEmoji, remarkGfm]}>
+            {Post.content}
+          </Markdown>
         </div>
       </div>
     </div>
