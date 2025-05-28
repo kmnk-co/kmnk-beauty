@@ -4,7 +4,7 @@ import { GetFeaturedPosts, GetPosts } from "./helpers/post";
 
 const Page = async () => {
   const Posts = await GetPosts();
-  const FeaturedPosts = await GetFeaturedPosts(Posts);
+  const FeaturedPosts = await GetFeaturedPosts(4, Posts);
 
   return (
     <div className="cmp-container">
