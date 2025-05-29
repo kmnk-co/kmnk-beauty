@@ -5,6 +5,8 @@ import { createRef, MouseEventHandler } from "react";
 import Markdown from "react-markdown";
 import { Post } from "../helpers/post";
 import { FormatAuthorStr } from "../helpers/format";
+import remarkGfm from "remark-gfm";
+import remarkEmoji from "remark-emoji";
 
 const Card = (props: { post: Post }) => {
   const ButtonRef = createRef<HTMLDivElement>();
@@ -35,7 +37,12 @@ const Card = (props: { post: Post }) => {
           )}
         </div>
       </div>
-      <Markdown components={Components}>{props.post.content}</Markdown>
+      <Markdown
+        components={Components}
+        remarkPlugins={[remarkEmoji, remarkGfm]}
+      >
+        {props.post.content}
+      </Markdown>
       <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-b from-transparent to-background from-25% to-75%"></div>
       <div
         ref={ButtonRef}

@@ -65,15 +65,15 @@ export const GetMetadata = async (slug: string): Promise<Metadata> => {
   };
 };
 
-/* Selects up to 4 featured posts *and* gets *shortened* content */
-export const GetFeaturedPosts = async (posts: Post[]): Promise<Post[]> => {
+/* Selects up to num featured posts *and* gets *shortened* content */
+export const GetFeaturedPosts = async (num: number, posts: Post[]): Promise<Post[]> => {
   let featuredPosts = posts.filter((post) => post.metadata.featured);
 
   // Shuffles the order of featured posts
   featuredPosts = featuredPosts.sort(() => 0.5 - Math.random());
   // Returns a max of 4 featured posts
   featuredPosts =
-    featuredPosts.length > 4 ? featuredPosts.slice(0, 4) : featuredPosts;
+    featuredPosts.length > num ? featuredPosts.slice(0, num) : featuredPosts;
 
   // Gets content only for the featured posts
   return Promise.all(

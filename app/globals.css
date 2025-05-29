@@ -34,17 +34,17 @@ body {
   }
 
   .cmp-markdown {
-    & p {
-        @apply hind-light;
-    }
     & h1 {
         @apply my-4 text-4xl text-center prompt;
     }
     & h2 {
-        @apply my-2 text-2xl lora-normal-oblique;
+        @apply my-3 text-2xl lora-normal-oblique;
     }
     & h3 {
         @apply my-2 text-xl hind-light;
+    }
+    & p {
+        @apply my-1.5 hind-light;
     }
     & a {
         @apply text-blue-500 underline;
@@ -53,13 +53,23 @@ body {
         @apply ml-3 pl-3 my-3 py-1 border-l-2 border-foreground;
     }
     & strong {
-        @apply font-bold;
+        @apply prompt;
     }
     & ol {
-        @apply my-1 pl-5 hind-light list-decimal;
+        @apply my-1.5 pl-5 hind-light list-decimal;
     }
     & ul {
-        @apply my-1 pl-5 hind-light list-disc;
+        @apply my-1.5 pl-5 hind-light list-disc;
+    }
+    & hr {
+        @apply my-1.5 border-none;
+    }
+    & table {
+        @apply mx-auto my-3 w-full min-w-[30rem] max-w-screen-md;
+        @apply text-center border border-foreground;
+        & th, & td {
+            @apply border p-1 border-foreground;
+        }
     }
   }
 }
