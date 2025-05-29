@@ -22,7 +22,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   return (
     <div className="cmp-container my-5">
       <div className="mb-5 pl-4 border-l-4 border-foreground">
-        <div className="text-4xl prompt">{Post.metadata.title}</div>
+        <div className="text-3xl prompt">{Post.metadata.title}</div>
         <div className="hind-light">
           {FormatAuthorStr(
             Post.metadata.authors,

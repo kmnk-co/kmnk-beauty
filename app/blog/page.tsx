@@ -7,7 +7,7 @@ const Page = async () => {
   const FeaturedPosts = await GetFeaturedPosts(4, Posts);
 
   return (
-    <div className="cmp-container">
+    <div className="mt-5 mb-10 cmp-container">
       <div className="my-5 text-3xl lora-normal-oblique">Featured Posts</div>
       <div className="grid md:grid-cols-2 gap-4">
         {FeaturedPosts.length > 0 ? (
