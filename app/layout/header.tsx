@@ -19,13 +19,13 @@ const Header = () => {
       <div className="flex justify-center items-center hind-light">
         {Links.map((value, index, array) => {
           return index < array.length / 2 ? (
-            <Link
+            <a
               key={value.Url}
               className="mx-2 text-md sm:text-lg sm:mx-3 lg:text-xl lg:mx-5 hover:underline"
               href={value.Url}
             >
               {value.Text}
-            </Link>
+            </a>
           ) : null;
         })}
         <Link
@@ -36,13 +36,13 @@ const Header = () => {
         </Link>
         {Links.map((value, index, array) => {
           return index >= array.length / 2 ? (
-            <Link
+            <a
               key={value.Url}
               className="mx-2 text-md sm:text-lg sm:mx-3 lg:text-xl lg:mx-5 hover:underline"
               href={value.Url}
             >
               {value.Text}
-            </Link>
+            </a>
           ) : null;
         })}
       </div>
