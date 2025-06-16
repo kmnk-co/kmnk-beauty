@@ -12,8 +12,10 @@ const Footer = () => {
             <div>Permanent Hair Removal & Waxing Services</div>
             <div>Located in Milwaukee, WI</div>
           </div>
-            <Link href="mailto:info@kmnk.beauty" className="block hover:underline">info@kmnk.beauty</Link>
-            <Link href="tel:+12629228821" className="block hover:underline">+1 (262) 922-8821</Link>
+          {/* <Link href="mailto:info@kmnk.beauty" className="block hover:underline">info@kmnk.beauty</Link>
+            <Link href="tel:+12629228821" className="block hover:underline">+1 (262) 922-8821</Link> */}
+          <div className="block hover:underline hover:cursor-pointer">info@kmnk.beauty</div>
+          <div className="block hover:underline hover:cursor-pointer">+1 (262) 922-8821</div>
         </div>
       </div>
       <div className="py-1 bg-background text-center text-foreground hind-light">

@@ -3,8 +3,8 @@ import Link from "next/link";
 const Links = [
   { Text: "About", Url: "/about" },
   { Text: "Blog", Url: "/blog" },
-  { Text: "Schedule", Url: "https:/cal.com/kmnk-beauty" },
-  { Text: "Contact", Url: "/contact" },
+  { Text: "Schedule", Url: "https://cal.com/kmnk-beauty" },
+  { Text: "Services", Url: "/services" },
 ];
 
 const Header = () => {
@@ -19,13 +19,13 @@ const Header = () => {
       <div className="flex justify-center items-center hind-light">
         {Links.map((value, index, array) => {
           return index < array.length / 2 ? (
-            <a
+            <Link
               key={value.Url}
               className="mx-2 text-md sm:text-lg sm:mx-3 lg:text-xl lg:mx-5 hover:underline"
               href={value.Url}
             >
               {value.Text}
-            </a>
+            </Link>
           ) : null;
         })}
         <Link
@@ -36,13 +36,13 @@ const Header = () => {
         </Link>
         {Links.map((value, index, array) => {
           return index >= array.length / 2 ? (
-            <a
+            <Link
               key={value.Url}
               className="mx-2 text-md sm:text-lg sm:mx-3 lg:text-xl lg:mx-5 hover:underline"
               href={value.Url}
             >
               {value.Text}
-            </a>
+            </Link>
           ) : null;
         })}
       </div>
