@@ -3,8 +3,8 @@ import Link from "next/link";
 const Links = [
   { Text: "About", Url: "/about" },
   { Text: "Blog", Url: "/blog" },
-  { Text: "Schedule", Url: "https:/cal.com/kmnk-beauty" },
-  { Text: "Contact", Url: "/contact" },
+  { Text: "Schedule", Url: "https://cal.com/kmnk-beauty" },
+  { Text: "Services", Url: "/services" },
 ];
 
 const Header = () => {
