@@ -13,7 +13,7 @@ const Page = () => {
 
   return (
     <div className="cmp-container">
-      <div className="mt-3 mb-5 text-4xl text-center prompt">Services</div>
+      <div className="mt-3 mb-5 text-4xl text-center prompt">KMNK Beauty Services</div>
       <div className="my-5">
         <div className="my-3 text-3xl text-center lora-normal-oblique">
           Electrolysis

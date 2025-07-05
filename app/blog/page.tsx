@@ -8,6 +8,9 @@ const Page = async () => {
 
   return (
     <div className="mt-5 mb-10 cmp-container">
+      <div className="mt-3 mb-5 text-4xl text-center prompt">
+        KMNK Beauty Blog
+      </div>
       <div className="my-5 text-3xl lora-normal-oblique">Featured Posts</div>
       <div className="grid md:grid-cols-2 gap-4">
         {FeaturedPosts.length > 0 ? (
