@@ -3,7 +3,7 @@ import remarkGfm from "remark-gfm";
 import remarkEmoji from "remark-emoji";
 import { ReadFile } from "../blog/helpers/file";
 
-export const GetMarkdown = async (): Promise<string> => {
+const GetMarkdown = async (): Promise<string> => {
   const Content = await ReadFile(process.cwd() + "/app/policies/content.mdown");
   return Content ?? "";
 };
