@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 const Links = [
-  { Text: "About", Url: "/about" },
   { Text: "Blog", Url: "/blog" },
   { Text: "Schedule", Url: "https://cal.com/kmnk-beauty" },
+  { Text: "Policies", Url: "/policies" },
   { Text: "Services", Url: "/services" },
 ];
 
