@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="text-center text-background hind-light">
           <div className="mb-5">
             <div>Permanent Hair Removal & Waxing Services</div>
-            <div>Located in Milwaukee, WI</div>
+            <div>207 E. Buffalo St. #606, Milwaukee WI, 53202</div>
           </div>
           {/* <Link href="mailto:info@kmnk.beauty" className="block hover:underline">info@kmnk.beauty</Link>
             <Link href="tel:+12629228821" className="block hover:underline">+1 (262) 922-8821</Link> */}
@@ -20,7 +20,7 @@ const Footer = () => {
       </div>
       <div className="py-1 bg-background text-center text-foreground hind-light">
         <div>
-          © 2025{" "}
+          © {new Date().getFullYear()} {" "}
           <Link href="https://kmnk.beauty/" className="hover:underline">
             KMNK™ Beauty.
           </Link>{" "}
